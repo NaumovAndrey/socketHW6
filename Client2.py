@@ -4,7 +4,7 @@ import threading
 
 def send_message():
     while True:
-        input_message = 'Andrey: ' + input('> ')
+        input_message = 'Alena: ' + input('> ')
 
         if input_message == "exit":
             chat_socket.close()
@@ -22,7 +22,7 @@ chat_socket = socket.socket()
 address = ('127.0.0.1', 65432)
 chat_socket.connect(address)
 
-name = b"Andrey"
+name = b"Alena"
 chat_socket.send(name)
 
 send_thread = threading.Thread(target=send_message)
